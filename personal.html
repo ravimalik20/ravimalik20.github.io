@@ -3,47 +3,141 @@
 <html>
 
 <head>
-	<title>Ravi Malik</title>
+	<title>Personal page.</title>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script>
+        $(document).on('click', '.panel-heading span.clickable', function(e){
+            var $this = $(this);
+	        if(!$this.hasClass('panel-collapsed')) {
+		        $this.parents('.panel').find('.panel-body').slideUp();
+		        $this.addClass('panel-collapsed');
+		        $this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+	        } else {
+		        $this.parents('.panel').find('.panel-body').slideDown();
+		        $this.removeClass('panel-collapsed');
+		        $this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+	        }
+        })
+    </script>
+
+    <style>
+        .clickable{
+            cursor: pointer;   
+        }
+
+        .panel-heading span {
+	        margin-top: -20px;
+	        font-size: 15px;
+        }
+    </style>
+
 </head>
 
 <body>
 
-	<h1>Test Site</h1>
+    <div class="container">
+        <!-- Static navbar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Personal page</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a target="_blank" href="https://myub.buffalo.edu/">MyUB</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://piazza.com/">Piaaza</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://library.buffalo.edu/">Library</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a target="_blank" href="https://www.linkedin.com/in/ravimalik20/">Linkedin</a></li>
+						<li><a target="_blank" href="https://github.com/ravimalik20">Github</a></li>
+						<li><a target="_blank" href="https://ravimalik20.github.io/">Profile</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</nav>
 
-	<p>
-		Currently this page is in terrible state, because it was created in a
-		hurry. Improvements to follow!
-	</p>
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron" style="margin-top:6%;">
+            <h1>Personal page</h1>
+            <p>A collection of resources used on a daily basis.</p>
+            <p>
+              <a class="btn btn-lg btn-primary" href="#resources" role="button">View &raquo;</a>
+            </p>
+          </div>
 
-	<ul>
-		<li><a target="_blank" href="https://www.cse.buffalo.edu/~kdantu/cse421/">CSE 521. Operating Systems</a></li>
-		<li><a target="_blank">CSE 522. Object oriented programming</a></li>
-		<li><a target="_blank" href="https://www.cse.buffalo.edu/~xinhe/cse531/">CSE 531. Analysis of algorithms</a></li>
-		<li><a target="_blank" href="https://www.cse.buffalo.edu/faculty/shambhu/cse56517/index.html">CSE 565. Computer Security</a></li>
-	</ul>
+        <div class="row" id="resources">
 
-	<h2>Useful Links</h2>
+			<div class="col-lg-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Courses</h3>
+                        <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+                    </div>
 
-	<ul>
-		<li><a target="_blank" href="https://myub.buffalo.edu/">My UB</li>
-		<li><a target="_blank" href="https://piazza.com/">Piaaza</a></li>
-		<li><a target="_blank" href="http://library.buffalo.edu/">Library</a></li>
-	</ul>
+                    <div class="panel-body">
+						<div class="list-group">
+							<a class="list-group-item" target="_blank" href="https://www.cse.buffalo.edu/~kdantu/cse421/">
+								CSE 521. Operating Systems
+							</a>
+							<a class="list-group-item" target="_blank">
+								CSE 522. Object oriented programming
+							</a>
+							<a class="list-group-item" target="_blank" href="https://www.cse.buffalo.edu/~xinhe/cse531/">
+								CSE 531. Analysis of algorithms
+							</a>
+							<a class="list-group-item" target="_blank" href="https://www.cse.buffalo.edu/faculty/shambhu/cse56517/index.html">
+								CSE 565. Computer Security
+							</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-	<h2>Online reading material (need to login)</h2>
+			<div class="col-lg-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Online reading material</h3>
+                        <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+                    </div>
 
-	<ul>
-		<li>
-			<a target="_blank" href="http://ebookcentral.proquest.com/lib/buffalo/reader.action?docID=3339142">
-				Inro to Algorithms. Cormen
-			</a>
-		</li>
-		<li>
-			<a target="_blank" href="">
-				
-			</a>
-		</li>
-	</ul>
+                    <div class="panel-body">
+						<div class="list-group">
+							<a class="list-group-item" target="_blank" href="http://ebookcentral.proquest.com/lib/buffalo/reader.action?docID=3339142">
+								Inro to Algorithms. Cormen
+							</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
 </body>
 
