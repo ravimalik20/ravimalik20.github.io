@@ -45,6 +45,9 @@
 		body { padding-top: 30px; }
     </style>
 
+	<link rel="stylesheet" href="tree.css" />
+	<script src="tree.js"></script>
+
 </head>
 
 <body>
@@ -126,25 +129,54 @@
 			<div class="col-lg-6">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Courses</h3>
+                        <h3 class="panel-title">TO DO</h3>
                         <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
                     </div>
 
                     <div class="panel-body">
-						<div class="list-group">
-							<a class="list-group-item" target="_blank" href="https://www.cse.buffalo.edu/~kdantu/cse421/">
-								CSE 521. Operating Systems
-							</a>
-							<a class="list-group-item" target="_blank" href="https://www.cse.buffalo.edu/~xinhe/cse531/">
-								CSE 531. Analysis of algorithms
-							</a>
-							<a class="list-group-item" target="_blank" href="https://www.cse.buffalo.edu/faculty/shambhu/cse56517/index.html">
-								CSE 565. Computer Security
-							</a>
-							<a class="list-group-item" target="_blank" href="https://www.cse.buffalo.edu//faculty/miller/Courses/CSE529/Fall-2017/syllabus.html">
-								CSE 529. Algos for Modern Computing System
-							</a>
-                        </div>
+						<div>
+						  <ul class="nav nav-list nav-menu-list-style">
+							<li>
+								<label class="tree-toggle nav-header glyphicon-icon-rpad">
+									<span class="glyphicon glyphicon-cloud m5"></span>Web Dev
+							        <span class="menu-collapsible-icon glyphicon glyphicon-chevron-down"></span>
+								</label>
+								  <ul class="nav nav-list tree bullets">
+									<li><a href="javascript:void(0)">PHP | Laravel</a></li>
+									<li><a href="javascript:void(0)">MySQL | PostgreSQL | MongoDB</a></li>
+									<li><a href="javascript:void(0)">Javascript | jQuery</a></li>
+									<li><a href="javascript:void(0)">Scaling: Redis, Load Balancer, AWS</a></li>
+									<li><a href="javascript:void(0)">REST API</a></li>
+									<li><a href="javascript:void(0)"></a>CRON jobs</li>
+								  </ul>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<label class="tree-toggle nav-header glyphicon-icon-rpad">
+									<span class="glyphicon glyphicon-flash m5"></span>Python
+							        <span class="menu-collapsible-icon glyphicon glyphicon-chevron-down"></span>
+								</label>
+								  <ul class="nav nav-list tree bullets">
+									<li><a href="javascript:void(0)">Basics</a></li>
+									<li><a href="javascript:void(0)">DB Interactions</a></li>
+									<li><a href="javascript:void(0)">Web Scraping</a></li>
+									<li><a href="javascript:void(0)">Web Crawling</a></li>
+									<li><a href="javascript:void(0)">Inter Process Communication</a></li>
+								  </ul>
+							</li>
+							<li>
+								<label class="tree-toggle nav-header glyphicon-icon-rpad">
+									<span class="glyphicon glyphicon-random m5"></span>Network Programming
+							    </label>
+							</li>
+							<li>
+								<label class="tree-toggle nav-header glyphicon-icon-rpad">
+									<span class="glyphicon glyphicon-align-justify m5"></span>Bash Scripting
+							    </label>
+							</li>
+						  </ul>
+        				</div>
+
                     </div>
                 </div>
             </div>
