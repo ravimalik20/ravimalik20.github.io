@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>   <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>      <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>      <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+
+		<meta charset="utf-8">
+		<title>Blog</title>
+		<meta name="description" content="">
+
+		<!-- Mobile Devices Viewport Resset-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css">
+		<!--[if IE 8]>
+			<link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome-ie7.min.css">
+		<![endif]-->
+
+		<link rel="stylesheet" href="../vendor/prettyPhoto/css/prettyPhoto.css">
+
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lato:300,400,700,400italic,700italic|Droid+Serif' rel='stylesheet' type='text/css'>
+
+		<!-- base layout styling -->
+		<link rel="stylesheet" href="../css/base.css">
+
+		<!-- components styling -->
+		<link rel="stylesheet" href="../css/components.css">
+		
+		<!-- template colorschemes -->
+		<link rel="stylesheet" href="../colorschemes/default.css">
+
+		<script src="../vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+	</head>
+
+	<script src="/blog/js/showdown.min.js"></script>
+	<script src="/blog/vendor/jquery-1.10.1.min.js"></script>
+	<!--
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="vendor/jquery-1.10.1.min.js"><\/script>')</script>
+	-->
+
+	<script>
+		$(document).ready(function () {
+			$.get("/blog/pages/data/1_learning_to_scale.md", function (val) {
+				var converter = new showdown.Converter(),
+					text = val,
+					html = converter.makeHtml(text);
+
+				$("#markdown").html(html);
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+	<h1 class="sr-only">Blog</h1>
+			
+	<nav id="header" class="header-navbar" role="navigation">
+
+		<div class="header-navbar-inner container">
+		
+			<div id="brand" class="navbar-brand">
+				<a href="index.html" rel="bookmark">
+
+					<!-- to disable lazy loading, remove data-src and data-src-retina -->
+					<img src="../img/logo.png" data-src="../img/logo.png" data-src-retina="../img/logo-retina.png" width="244" height="56" alt="">
+
+					<!--fallback for no javascript browsers-->
+					<noscript>
+						<img src="../img/logo.png" alt="">
+					</noscript>
+				</a>
+			</div>
+
+			<ul class="nav nav-pages hidden-xs">
+				
+			</ul>
+
+			<ul class="nav nav-icons">
+				<li>
+					<a href="#" class="btn-icon" data-toggle=".header-navbar-inner" data-toggle-class="search-toggled-in">
+						<span class="search-toggled-out-icon glyphicon glyphicon-search"></span>
+						<span class="search-toggled-in-icon glyphicon glyphicon-remove"></span>
+					</a>
+				</li>
+			</ul>
+
+			<div class="search-wrapper js-stoppropagation">
+				<div class="search-wrapper-inner">
+					<form>
+						<input type="text" value="" placeholder="search ... ">
+						<button class="btn-icon" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+					</form>
+				</div>
+			</div>
+
+			<ul class="nav navbar-nav">
+				
+				
+				
+			</ul>
+
+		</div>
+
+	</nav>
+
+	<div id="main" class="container">
+
+		<div class="section section-no-margin-bottom row entries bg-primary">
+
+			<article class="entry style-grid style-hero hero-nav type-post col-xs-6">
+				
+				<a href="single.html">
+
+					<header class="entry-header">
+						<p class="small">Previous Story</p>
+						<h3 class="entry-title">Rumor: The long awaited update for Retina Display is ready to be annaunced on the next event held by them</h3>
+					</header>
+
+					<figure class="entry-thumbnail">
+
+						<div class="overlay overlay-primary"></div>
+
+						<!-- to disable lazy loading, remove data-src and data-src-retina -->
+						<img src="../img/placeholder.gif" data-src="http://placehold.it/480x280" data-src-retina="http://placehold.it/720x420" width="480" height="280" alt="">
+
+						<!--fallback for no javascript browsers-->
+						<noscript>
+							<img src="http://placehold.it/480x280" alt="">
+						</noscript>
+
+					</figure>
+
+				</a> 
+
+			</article>
+
+			<article class="entry style-grid style-hero hero-nav type-post col-xs-6">
+				
+				<a href="single.html">
+
+					<header class="entry-header">
+						<p class="small">Next Story</p>
+						<h3 class="entry-title">Click here to see single blog post with sidebar sit voluptatem accusantium doloremque laudantium</h3>
+					</header>
+
+					<figure class="entry-thumbnail">
+
+						<div class="overlay overlay-primary"></div>
+
+						<!-- to disable lazy loading, remove data-src and data-src-retina -->
+						<img src="../img/placeholder.gif" data-src="http://placehold.it/480x280" data-src-retina="http://placehold.it/720x420" width="480" height="280" alt="">
+
+						<!--fallback for no javascript browsers-->
+						<noscript>
+							<img src="http://placehold.it/480x280" alt="">
+						</noscript>
+
+					</figure>
+
+				</a> 
+
+			</article>
+
+		</div> <!-- class section -->
+
+		<div id="content" class="content bg-base section">
+			
+			<div class="ribbon ribbon-highlight">
+				<ol class="breadcrumb ribbon-inner">
+					<li><a href="/blog/">Home</a></li>
+					<li><a href="/blog/pages/">Pages</a></li>
+					<li class="active" title="1_learning_to_scale">1_learning_to_scale</li>
+				</ol>
+			</div>
+			
+			<div class="row">
+
+				<header class="page-header col-md-10 col-md-offset-1">
+						
+					<div class="page-meta pull-right hidden-xs">
+						<a href="#comments">
+							<span class="comments-count-balloon bg-primary">0<em>Comments</em></span>
+						</a>
+					</div>
+
+					<h2 class="page-title full-page-title">
+						Learning to scale
+					</h2>
+
+				</header>
+
+				<article class="entry style-single style-single-full type-post col-md-10 col-md-offset-1">
+					<div class="entry-meta indented">
+						<span class="author">by <a href="blog.html">Ravi Malik</a></span>
+						<span class="entry-date"><a href="blog.html">on <time datetime="2018-01-26T15:35:34+00:00">January 26 2018</time></a></span>
+						<!--span class="category">In <a href="blog.html">Social Media</a></span-->
+					</div>
+
+					<div class="entry-content indented" id="markdown">
+						<!-- Content goes here -->
+					</div>
+				</article>
+
+			</div>
+
+		</div> <!-- Content -->
+		
+	</div> <!-- Main -->
+
+</body>
+
+</html>
