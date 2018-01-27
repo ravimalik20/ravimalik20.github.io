@@ -448,13 +448,13 @@ ul.sub-menu {
     background-color: #e7e7e7;
 }
 
-.home-banner-one .banner-content {
+/*.home-banner-one .banner-content {
     background-image: url(../images/bg/banner.jpg);
     background-color: #e7e7e7;
     position: relative;
     background-position: center;
     background-size: cover;
-}
+}*/
 
 .home-two #home-banner {
     background-image: url(../images/bg/2.png);
